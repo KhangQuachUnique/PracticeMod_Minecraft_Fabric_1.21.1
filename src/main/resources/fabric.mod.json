@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "practicemod",
+	"version": "${version}",
+	"name": "Practice Mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Khang Quach"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/practicemod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.khangquach.practicemod.PracticeMod"
+		],
+		"fabric-datagen": [
+			"net.khangquach.practicemod.PracticeModDataGenerator"
+		],
+		"client": [
+			"net.khangquach.practicemod.PracticeModClient"
+		]
+	},
+	"mixins": [
+		"practicemod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"required": true,
+	"package": "net.khangquach.practicemod.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ExampleMixin",
+		"EntityMixin",
+		"EntityRenderDispatcherMixin",
+		"EntityHitResultMixin",
+		"WorldMixin",
+		"ServerWorldMixin",
+		"ClientWorldMixin",
+		"GeckoLibMobMixin",
+		"GeoEntityRendererMixin",
+		"ClientMobEntityMixin",
+		"ServerEntityManagerMixin",
+		"ClientEntityMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
