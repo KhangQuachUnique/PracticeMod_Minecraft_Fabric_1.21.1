@@ -2,7 +2,6 @@ package net.khangquach.practicemod.entity.client;
 
 import net.khangquach.practicemod.PracticeMod;
 import net.khangquach.practicemod.entity.custom.DragonEntity;
-import net.khangquach.practicemod.entity.internal.MultiPartGeoEntityRenderer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
@@ -26,9 +25,6 @@ public class DragonRenderer extends GeoEntityRenderer<DragonEntity> {
 
         if(entity.isBaby()) {
             poseStack.scale(0.4f,0.4f,0.4f);
-        }
-        if (this instanceof MultiPartGeoEntityRenderer renderer) {
-            renderer.practicemod$removeTickForEntity(animatable);
         }
         super.render(entity, entityYaw, partialTick, poseStack, bufferSource, packedLight);
     }

@@ -67,7 +67,7 @@ public class DragonEntity extends MobEntity implements Monster, GeoAnimatable {
         };
 
         this.setHealth(this.getMaxHealth());
-        this.noClip = true;
+        this.noClip = false;
         this.ignoreCameraFrustum = true;
     }
 
