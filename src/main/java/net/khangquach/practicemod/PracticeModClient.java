@@ -17,13 +17,6 @@ public class PracticeModClient implements ClientModInitializer {
     public void onInitializeClient() {
         EntityRendererRegistry.register(ModEntities.HEDGEHOG, HedgehogRenderer::new);
         EntityRendererRegistry.register(ModEntities.DRAGON, DragonRenderer::new);
-        Identifier location = Identifier.of(PracticeMod.MOD_ID, HitboxDataLoader.HITBOX_DATA.getName().toLowerCase());
-        ClientPlayNetworking.registerGlobalReceiver(location, (client, handler, buf, responseSender) -> {
-            var map = buf.readMap(HashMap::new, PacketByteBuf::readString, HitboxDataLoader::readBuf);
-            client.execute(() -> HitboxDataLoader.HITBOX_DATA.replaceData(map));
-        });
-        if (FabricLoader.getInstance().isModLoaded("geckolib")) {
-            GeckoLibEvents.init();
-        }
+
     }
 }
